@@ -30,6 +30,8 @@ public class Course {
 
     private Boolean active;
 
+    private String description;
+
 
     @JsonIgnore
     @ToString.Exclude

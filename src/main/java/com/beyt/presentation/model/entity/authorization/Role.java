@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.FieldNameConstants;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -14,6 +15,7 @@ import java.util.Set;
 @ToString
 @Entity
 @Table(name = "role")
+@FieldNameConstants
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

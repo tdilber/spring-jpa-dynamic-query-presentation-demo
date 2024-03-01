@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.FieldNameConstants;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,6 +17,7 @@ import java.util.Set;
 @ToString
 @Entity
 @Table(name = "my_authorization")
+@FieldNameConstants
 public class Authorization {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

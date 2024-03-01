@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.FieldNameConstants;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
@@ -16,6 +17,7 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Table(name = "role_authorization")
+@FieldNameConstants
 public class RoleAuthorization {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

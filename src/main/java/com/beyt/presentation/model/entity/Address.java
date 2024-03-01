@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.FieldNameConstants;
 
 import javax.persistence.*;
 
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "address")
+@FieldNameConstants
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

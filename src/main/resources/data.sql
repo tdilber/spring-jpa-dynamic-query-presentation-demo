@@ -25,16 +25,19 @@ INSERT INTO department (id, name) VALUES (10, 'Economics');
 -- ... repeat for 8 more departments
 
 -- Insert queries for Course
-INSERT INTO course (id, name, start_date, max_student_count, active) VALUES (1, 'Introduction to Computer Science', '2016-06-18', 50, 1);
-INSERT INTO course (id, name, start_date, max_student_count, active) VALUES (2, 'Calculus I', '2017-06-18', 60, 1);
-INSERT INTO course (id, name, start_date, max_student_count, active) VALUES (3, 'Calculus II', '2018-06-18', 150, null);
-INSERT INTO course (id, name, start_date, max_student_count, active) VALUES (4, 'Physics I', '2019-06-18', 250, null);
-INSERT INTO course (id, name, start_date, max_student_count, active) VALUES (5, 'Physics II', '2020-06-18', 350, null);
-INSERT INTO course (id, name, start_date, max_student_count, active) VALUES (6, 'Chemistry I', '2021-06-18', 40, null);
-INSERT INTO course (id, name, start_date, max_student_count, active) VALUES (7, 'Chemistry II', '2022-06-18', 30, null);
-INSERT INTO course (id, name, start_date, max_student_count, active) VALUES (8, 'Biology I', '2015-06-18', 20, 1);
-INSERT INTO course (id, name, start_date, max_student_count, active) VALUES (9, 'Biology II', '2013-06-18', 54, 1);
-INSERT INTO course (id, name, start_date, max_student_count, active) VALUES (10, 'English Literature I', '2025-06-18', 10, 0);
+INSERT INTO course (id, name, start_date, max_student_count, active, description)
+VALUES
+    (1, 'Introduction to Computer Science', '2016-06-18', 50, 1, 'Introduction to fundamental concepts of computer science.'),
+    (2, 'Calculus I', '2017-06-18', 60, 1, 'Introduction to fundamental concepts of calculus.'),
+    (3, 'Calculus II', '2018-06-18', 250, null, 'Advanced topics in calculus including integrals and series.'),
+    (4, 'Physics I', '2019-06-18', 250, null, 'Introduction to classical mechanics and Newtonian physics.'),
+    (5, 'Physics II', '2020-06-18', 250, null, 'Advanced topics in physics including electromagnetism and thermodynamics.'),
+    (6, 'Chemistry I', '2021-06-18', 40, null, 'Basic principles of chemistry including atomic structure and chemical bonding.'),
+    (7, 'Chemistry II', '2022-06-18', 30, null, 'Continuation of chemistry studies covering topics like kinetics and equilibrium.'),
+    (8, 'Biology I', '2015-06-18', 20, 1, 'Introduction to cellular biology and genetics.'),
+    (9, 'Biology II', '2013-06-18', 54, 1, 'Advanced topics in biology including evolution and ecology.'),
+    (10, 'English Literature I', '2025-06-18', 10, 0, 'Exploration of classic works of English literature and literary analysis.');
+
 -- ... repeat for 8 more courses
 
 -- Insert queries for Student
@@ -53,7 +56,9 @@ INSERT INTO student (id, name, address_id, department_id) VALUES (11, 'Talha Dil
 
 -- Insert queries for Student_Course
 INSERT INTO student_course (student_id, course_id) VALUES (1, 1);
+INSERT INTO student_course (student_id, course_id) VALUES (1, 2);
 INSERT INTO student_course (student_id, course_id) VALUES (2, 2);
+INSERT INTO student_course (student_id, course_id) VALUES (2, 4);
 INSERT INTO student_course (student_id, course_id) VALUES (3, 3);
 INSERT INTO student_course (student_id, course_id) VALUES (4, 4);
 INSERT INTO student_course (student_id, course_id) VALUES (5, 5);

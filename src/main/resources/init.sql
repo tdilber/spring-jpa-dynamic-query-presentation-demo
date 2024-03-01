@@ -16,7 +16,8 @@ CREATE TABLE course (
                         name VARCHAR(255),
                         start_date DATETIME,
                         max_student_count INT,
-                        active BIT
+                        active BIT,
+                        description VARCHAR(255)
 );
 
 CREATE TABLE student (
