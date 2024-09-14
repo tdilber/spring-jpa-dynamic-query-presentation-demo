@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.support.ScopeNotActiveException;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 
 @Service
 public class CustomEntityManagerProvider implements IEntityManagerProvider {

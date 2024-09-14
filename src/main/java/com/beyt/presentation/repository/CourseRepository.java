@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CourseRepository extends JpaRepository<Course, Long>, JpaDynamicQueryRepository<Course, Long> {
+public interface CourseRepository extends JpaDynamicQueryRepository<Course, Long> {
 }

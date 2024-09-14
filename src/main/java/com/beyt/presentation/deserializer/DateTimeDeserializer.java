@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.sql.Timestamp;
 
 @Component
 public class DateTimeDeserializer extends BasicDeserializer {
@@ -17,8 +18,21 @@ public class DateTimeDeserializer extends BasicDeserializer {
             }
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             simpleDateFormat.setTimeZone(java.util.TimeZone.getTimeZone("UTC"));
-            return  (T)  simpleDateFormat.parse(value.toString());
+            Date parsedDate = simpleDateFormat.parse(value.toString());
+            return (T) parsedDate;
         }
+
+        if (clazz.isAssignableFrom(Timestamp.class)) {
+            if (value instanceof Timestamp date) {
+                return (T) date;
+            }
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            simpleDateFormat.setTimeZone(java.util.TimeZone.getTimeZone("UTC"));
+            Date parsedDate = simpleDateFormat.parse(value.toString());
+            return (T) new Timestamp(parsedDate.getTime());
+        }
+
+
 
         return super.deserialize(value, clazz);
     }

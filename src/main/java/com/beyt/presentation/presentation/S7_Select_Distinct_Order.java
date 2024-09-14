@@ -19,7 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.util.Pair;
 
-import javax.persistence.Tuple;
+import jakarta.persistence.Tuple;
 import java.util.List;
 
 @PresentationService

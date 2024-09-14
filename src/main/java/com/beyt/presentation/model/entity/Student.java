@@ -10,7 +10,7 @@ import lombok.ToString;
 import lombok.experimental.FieldNameConstants;
 import org.hibernate.annotations.Fetch;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Set;
 
 @ToString

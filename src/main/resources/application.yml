@@ -4,7 +4,6 @@ spring:
       data-locations: classpath:data.sql
       mode: always
       schema-locations: classpath:init.sql
-  profiles:
   application:
     name: demo
   datasource:
@@ -25,7 +24,7 @@ spring:
     hibernate:
       ddl-auto: none
       naming:
-        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
     properties:
       hibernate.id.new_generator_mappings: true
